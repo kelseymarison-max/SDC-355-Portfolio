@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio Homepage">
+  <title>My Portfolio</title>
+</head>
+<body>
+  <header>
+    <h1>
+      My Portfolio Homepage
+    </h1>
+    <p id="welcomeMessage">Welcome!</p>
+
+    <nav>
+      <ul>
+        <li><a href="#about"></a>About</li>
+        <li><a href="#projects"></a>Projects</li>
+        <li><a href="#contact"></a>Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Hello! My name is Kelsey Marison and I am a student at ECPI University, Virginia Beach. 
+      I am majoring in Software Development, following the Ai/ML and Data Analytics track. This
+      webpage is being created for my SDC355: JavaScript course to showcase some of the work I have created.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are some of my current projects:</p>
+
+    <ul>
+      <li><a href=project1placeholder.jpeg>Project 1</a></li>
+      <li><a href=project2placeholder.jpeg>Project 2</a></li>
+      <li><a href=project3placeholder.jpeg>Project 3</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <form>
+      <label for ="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="message">Message:</label>
+      <input type="text" id="message" name="message" required">
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <script>
+
+    let userName = prompt("Please enter your name:");
+
+    if (userName !== null && userName.trim() !=="") {
+      document.getElementById("welcomeMessage").textContent = "Hello, " + userName + "!";
+    } else {
+      document.getElementById("welcomeMessage").textContent = "Hello, Guest!";
+    }
+  </script>
+</body>
